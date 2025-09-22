@@ -1,94 +1,96 @@
-<!doctype html>
-<header>
-<div class="brand">MinhaPlataforma</div>
-<div style="margin-left:auto;display:flex;gap:12px;align-items:center">
-<div class="badge">Cashback {{cashback_percent}}%</div>
-<div class="badge">Cupom: {{coupon_code}}</div>
-</div>
-</header>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Headset Gamer Pro — Oferta Exclusiva</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      color: #333;
+      text-align: center;
+    }
+    header {
+      background: #2d6cdf;
+      color: white;
+      padding: 20px;
+    }
+    .container {
+      max-width: 700px;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    }
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    .price-old {
+      text-decoration: line-through;
+      color: #777;
+      font-size: 18px;
+    }
+    .price {
+      font-size: 28px;
+      font-weight: bold;
+      color: #e63946;
+      margin: 10px 0;
+    }
+    .cupom, .cashback {
+      margin: 10px 0;
+      font-size: 16px;
+      background: #f1f1f1;
+      padding: 10px;
+      border-radius: 8px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 15px 25px;
+      background: #2d6cdf;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #1a4bb8;
+    }
+    footer {
+      margin-top: 30px;
+      padding: 15px;
+      background: #eee;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🔥 Oferta Exclusiva 🔥</h1>
+  </header>
 
+  <div class="container">
+    <h2>Headset Gamer Pro RGB</h2>
+    <img src="https://via.placeholder.com/600x300.png?text=Headset+Gamer+Pro" alt="Headset Gamer Pro">
 
-<main class="grid">
-<section>
-<div class="gallery">
-<img src="{{product_image}}" alt="{{product_title}}" />
-</div>
+    <p class="price-old">De: R$ 399,90</p>
+    <p class="price">Por: R$ 249,90</p>
 
+    <div class="cupom">💸 Use o cupom: <b>GAME10</b> e ganhe 10% OFF</div>
+    <div class="cashback">🔙 Receba R$ 20,00 de <b>cashback</b> após a compra</div>
 
-<div style="margin-top:16px;display:flex;gap:12px;align-items:center">
-<div class="info">Avaliação: ★ {{rating}} • {{total_reviews}} avaliações</div>
-<div class="info">Estoque: {{stock_status}}</div>
-</div>
+    <a class="btn" href="https://www.amazon.com.br/" target="_blank">Comprar agora</a>
+  </div>
 
-
-<div style="margin-top:18px">
-<h2>Descrição</h2>
-<p style="margin-top:8px;color:#333">{{short_description}}</p>
-</div>
-
-
-<div style="margin-top:18px">
-<h2>Como funciona o cashback</h2>
-<p class="disclosure">1) Clique no botão "Comprar" (link rastreado). 2) Complete a compra no parceiro. 3) Recebemos confirmação e o cashback vai para sua conta pendente.</p>
-</div>
-
-
-</section>
-
-
-<aside>
-<div class="meta">
-<h1>{{product_title}}</h1>
-<div class="price-row">
-<div class="price">R$ {{price_promo}}</div>
-<div class="price-old">R$ {{price_original}}</div>
-</div>
-
-
-<div style="display:flex;gap:8px">
-<button class="btn-primary" onclick="onBuy()">Comprar — Usar Cupom</button>
-<button class="btn-secondary" onclick="onSave()">Salvar</button>
-</div>
-
-
-<div style="margin-top:10px" class="info">Economize R$ {{savings}} + {{cashback_percent}}% cashback</div>
-
-
-<div style="margin-top:12px">
-<div style="font-weight:700">Ofertas disponíveis</div>
-<div class="offers-list" id="offersList">
-<!-- Repetir por offer -->
-<div class="offer-item"><span>Cupom 10%</span><span>Válido até {{coupon_valid_until}}</span></div>
-</div>
-</div>
-
-
-<div style="margin-top:16px;font-size:13px;color:#666">Garantia de preço e política de devolução aplicáveis no parceiro.</div>
-
-
-<div style="margin-top:14px;font-size:12px;color:#444">Link afiliado: ao comprar por aqui podemos receber comissão. Sem custo adicional para você.</div>
-</div>
-</aside>
-</main>
-
-
-<footer>
-<div style="display:flex;justify-content:space-between;align-items:center">
-<div>Política de Cashback • Termos • Privacidade</div>
-<div>© {{year}} MinhaPlataforma</div>
-</div>
-</footer>
-</div>
-
-
-<script>
-function onBuy(){
-// Redireciona para o link trackeado (substituído no servidor)
-window.location.href = '{{tracked_affiliate_link}}';
-}
-function onSave(){
-alert('Oferta salva!');
-}
-</script>
+  <footer>
+    Página de exemplo criada para teste no GitHub Pages 🚀
+  </footer>
 </body>
 </html>
