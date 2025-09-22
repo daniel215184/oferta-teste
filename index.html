@@ -1,0 +1,94 @@
+<!doctype html>
+<header>
+<div class="brand">MinhaPlataforma</div>
+<div style="margin-left:auto;display:flex;gap:12px;align-items:center">
+<div class="badge">Cashback {{cashback_percent}}%</div>
+<div class="badge">Cupom: {{coupon_code}}</div>
+</div>
+</header>
+
+
+<main class="grid">
+<section>
+<div class="gallery">
+<img src="{{product_image}}" alt="{{product_title}}" />
+</div>
+
+
+<div style="margin-top:16px;display:flex;gap:12px;align-items:center">
+<div class="info">Avaliação: ★ {{rating}} • {{total_reviews}} avaliações</div>
+<div class="info">Estoque: {{stock_status}}</div>
+</div>
+
+
+<div style="margin-top:18px">
+<h2>Descrição</h2>
+<p style="margin-top:8px;color:#333">{{short_description}}</p>
+</div>
+
+
+<div style="margin-top:18px">
+<h2>Como funciona o cashback</h2>
+<p class="disclosure">1) Clique no botão "Comprar" (link rastreado). 2) Complete a compra no parceiro. 3) Recebemos confirmação e o cashback vai para sua conta pendente.</p>
+</div>
+
+
+</section>
+
+
+<aside>
+<div class="meta">
+<h1>{{product_title}}</h1>
+<div class="price-row">
+<div class="price">R$ {{price_promo}}</div>
+<div class="price-old">R$ {{price_original}}</div>
+</div>
+
+
+<div style="display:flex;gap:8px">
+<button class="btn-primary" onclick="onBuy()">Comprar — Usar Cupom</button>
+<button class="btn-secondary" onclick="onSave()">Salvar</button>
+</div>
+
+
+<div style="margin-top:10px" class="info">Economize R$ {{savings}} + {{cashback_percent}}% cashback</div>
+
+
+<div style="margin-top:12px">
+<div style="font-weight:700">Ofertas disponíveis</div>
+<div class="offers-list" id="offersList">
+<!-- Repetir por offer -->
+<div class="offer-item"><span>Cupom 10%</span><span>Válido até {{coupon_valid_until}}</span></div>
+</div>
+</div>
+
+
+<div style="margin-top:16px;font-size:13px;color:#666">Garantia de preço e política de devolução aplicáveis no parceiro.</div>
+
+
+<div style="margin-top:14px;font-size:12px;color:#444">Link afiliado: ao comprar por aqui podemos receber comissão. Sem custo adicional para você.</div>
+</div>
+</aside>
+</main>
+
+
+<footer>
+<div style="display:flex;justify-content:space-between;align-items:center">
+<div>Política de Cashback • Termos • Privacidade</div>
+<div>© {{year}} MinhaPlataforma</div>
+</div>
+</footer>
+</div>
+
+
+<script>
+function onBuy(){
+// Redireciona para o link trackeado (substituído no servidor)
+window.location.href = '{{tracked_affiliate_link}}';
+}
+function onSave(){
+alert('Oferta salva!');
+}
+</script>
+</body>
+</html>
